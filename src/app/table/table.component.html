@@ -1,0 +1,29 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>EMAIL</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>AVATAR</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of items | paginate:{itemsPerPage:pageSize, currentPage:currentPage}" >
+            <td>{{data.id}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.first_name}}</td>
+            <td>{{data.last_name}}</td>
+            <td><img [src]="data.avatar" width="100" height="100"></td>
+            
+        </tr>
+    </tbody>
+</table>
+<pagination-controls
+[currentPage] ="currentPage"
+[pageSize]="pageSize"
+[totalItems] ="totalItems"
+(pageChange)="onPageChange($event)"
+>
+    
+</pagination-controls>

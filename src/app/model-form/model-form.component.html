@@ -1,0 +1,26 @@
+<button mat-icon-button style="float: right; margin: 5px;" (click)="dialogRef.close()">
+    <mat-icon>close</mat-icon>
+</button>
+<mat-dialog-content>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <p>
+            <mat-form-field>
+                <input matInput placeholder="Name" formControlName="name">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <textarea matInput placeholder="mobile" formControlName="mobile"></textarea>
+                <mat-icon matSuffix>save</mat-icon>
+            </mat-form-field>
+        </p>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="submitForm()">Save</button>
+    <button mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>
+</mat-dialog-actions>

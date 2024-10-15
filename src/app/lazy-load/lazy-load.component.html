@@ -1,0 +1,10 @@
+<div *ngFor="let item of items">
+    <div>USERId: {{ item.userId }}</div>
+    <div>ID: {{ item.id }}</div>
+    <div>TITTLE: {{ item.title }}</div>
+    <div>COMPLETED: {{ item.completed }}</div>
+  </div>
+  
+  <div *ngIf="loading">Loading...</div>
+  <!-- <div *ngIf="!hasMore && !loading">No more items to load.</div> -->
+  

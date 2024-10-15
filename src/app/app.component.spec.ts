@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular_Charts'`, () => {
+  it(`should have as title 'ApexChart'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular_Charts');
+    expect(app.title).toEqual('ApexChart');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Angular_Charts app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ApexChart app is running!');
   });
 });

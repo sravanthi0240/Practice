@@ -1,0 +1,65 @@
+<!-- <nav class="navbar navbar-expand-lg" >
+    <div class="container-fluid">
+      <button class="btn btn-outline-light me-2" type="button" (click)="toggleSidebar()">
+        <i class="bi bi-list"></i>
+      </button>
+      <a class="navbar-brand" href="#">MyApp</a>
+    </div>
+  </nav> -->
+
+  <div>
+    
+    <nav class="navbar navbar-expand-lg" style="background-color: white; border-bottom: 4px solid red; height: 100px;">
+      <div class="container-fluid">
+        <button class="btn btn-outline-light me-2" style="background-color: rgb(209, 181, 57);" type="button" (click)="toggleSidebar()">
+          <i class="bi bi-list"></i> 
+        </button>
+            <img src="assets/new_img//icons/NHM.png" style="height: 70px; width: 70px; padding-left: none;">
+            <img src="assets/new_img//icons/Ncert.png" style="height: 70px; width: 70px;">
+        <div class="d-inline" style="text-align: center;">
+            <h4><b>Ayushman Bharat</b></h4>
+        <h4><b>SchoolHealth and Wellness Programme</b></h4>
+        <h6>MIS Dashboard Version 2.1</h6>
+        </div>
+        <img src="assets/new_img/icons/SHWAI.png" style="height: 70px; width: 70px;">
+        <img src="assets/new_img//icons/admin%20profile.png" style="height: 40px; width: 40px;">
+      </div>
+    </nav>
+  
+  
+    <div class="d-flex">
+      
+      <div *ngIf="isOpened" class="bg-white sidebar p-3" style="width: 20px;">
+        <ul class="nav flex-column">
+            
+          <li class="nav-item">
+            <img src="assets/new_img/Dashboard.png" style="height: 35px; width: 35px;">
+            <a [routerLink]= "['/dashboard/dshbrd']" class="nav-link text-dark" href="#" style="padding: 0px; font-size: small;">DASHBOARD</a>
+          </li> <hr>
+          <li class="nav-item">
+            <img src="assets/new_img/Registration.png" style="height: 35px; width: 35px;">
+            <a [routerLink]= "['/dashboard/reg']" class="nav-link text-dark" href="#" style="padding: 0px; font-size: smaller;">REGISTRATION</a>
+          </li><hr>
+          <li class="nav-item">
+            <img src="assets/new_img/Test-upload.png" style="height: 35px; width: 35px;">
+            <a [routerLink]= "['/dashboard/test']" class="nav-link text-dark" href="#" style="padding: 0px; font-size:smaller;">TEST</a>
+          </li><hr>
+          <li class="nav-item">
+            <img src="assets/new_img/IEC-Material.png" style="height: 35px; width: 4035pxpx;">
+            <a [routerLink]= "['/dashboard/iec']" class="nav-link text-dark" href="#" style="padding: 0px; font-size:smaller;">IEC MATERIAL UPLOAD</a>
+          </li><hr>
+          <li class="nav-item">
+            <img src="assets/new_img/Report-Download.png" style="height: 35px; width: 35px;">
+            <a [routerLink]= "['/dashboard/rep']" class="nav-link text-dark" href="#" style="padding: 0px; font-size:smaller;">REPORTS</a>
+          </li>
+        </ul>
+      </div>
+  
+      
+      <div class="content p-4 flex-grow-1" style="margin-left: 120px;">
+        <!-- <h2>Welcome to the Dashboard</h2>
+        <p>PLEASE CHOOSE APPROPRIATE FILTERS</p> -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

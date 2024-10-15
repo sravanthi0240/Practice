@@ -1,0 +1,64 @@
+<div class="container mt-4">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name" />
+        <div *ngIf="userForm.get('name').touched && userForm.get('name').hasError('required')">
+            <span class="text-danger"><small>*Name is required</small></span>
+          </div>
+          <div *ngIf="userForm.get('name').hasError('pattern')">
+           <span class="text-danger"><small>*No white spaces allowed</small></span>
+          </div>
+      </div>
+  
+     
+      <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile No</label>
+        <input type="text" id="mobile" class="form-control" formControlName="mobile" />
+        <div *ngIf="userForm.get('mobile').touched && userForm.get('mobile').hasError('required')">
+            Mobile is required.
+          </div>
+          <div *ngIf="userForm.get('mobile').hasError('pattern')">
+            <span class="text-danger"><small>*Enter 10 diigit mobile number</small></span>
+          </div>
+      </div>
+  
+     
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" formControlName="email" />
+        <div *ngIf="userForm.get('email').touched && userForm.get('email').hasError('required')">
+            Email is required
+          </div>
+          <div *ngIf="userForm.get('email').hasError('email')">
+            <span class="text-danger">Email must be a valid email address</span>
+          </div>
+      </div>
+  
+     
+      <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <div>
+          <input type="radio" formControlName="gender" value="male" /> Male
+          <input type="radio" formControlName="gender" value="female" /> Female
+        </div>
+      </div>
+  
+      
+      <div class="mb-3">
+        <label for="dob" class="form-label">Date of Birth</label>
+        <input type="date" id="dob" class="form-control" formControlName="dob" (change)="onDobChange()" />
+        
+      </div>
+  
+      
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="text" id="age" class="form-control" formControlName="age" readonly />
+      </div>
+  
+      
+      <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+    </form>
+  </div>

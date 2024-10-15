@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/angular-charts'),
+      dir: require('path').join(__dirname, './coverage/apex-chart'),
       subdir: '.',
       reporters: [
         { type: 'html' },
