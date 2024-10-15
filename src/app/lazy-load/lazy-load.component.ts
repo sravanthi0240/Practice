@@ -10,6 +10,7 @@ export class LazyLoadComponent implements OnInit {
   items: any[] = [];
   page: number = 1;
   loading: boolean = false;
+  lastScrollTop: number = 0;
 
   constructor(private dataService: LazyloadService) {}
 
@@ -36,8 +37,15 @@ export class LazyLoadComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll() {
+    const scrollTop = window.scrollY || window.pageYOffset;
     if((window.innerHeight +window.scrollY) >= document.body.offsetHeight){
       this.loadItems();
     }
+
+    if (scrollTop < 100 && scrollTop < this.lastScrollTop) {
+      this.loadItems();
+    }
+
+    this.lastScrollTop = scrollTop;
   }
 }
