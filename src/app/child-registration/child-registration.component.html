@@ -1,0 +1,36 @@
+      
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>S.No</th>
+              <th>Action</th>
+              <th>Name of Women</th>
+              <th>Baby of Women</th>
+              <th>Date of Registration</th>
+              <th>MP-ID of Women</th>
+              <th>Age</th>
+              <th>Mobile Number</th>
+              <th>No of Children</th>
+              <th>Husband Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let record of records; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{record.action}}</td>
+              <td>{{ record.womenName }}</td>
+              <td>{{ record.babyName }}</td>
+              <td>{{ record.registrationDate }}</td>
+              <td>{{ record.mpId }}</td>
+              <td>{{ record.age }}</td>
+              <td>{{ record.mobileNumber }}</td>
+              <td>{{ record.noOfChildren }}</td>
+              <td>{{ record.husbandName }}</td>
+              <td>{{ record.address }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  

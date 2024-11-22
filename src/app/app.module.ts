@@ -19,7 +19,7 @@ import { JsonChartComponent } from './json-chart/json-chart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { MapComponent } from './map/map.component';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { FormComponent } from './form/form.component';
@@ -45,7 +45,13 @@ import { ReportsComponent } from './reports/reports.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotificationComponent } from './notification/notification.component';
 import { LazyLoadComponent } from './lazy-load/lazy-load.component';
-
+import { KeyboardEventComponent } from './keyboard-event/keyboard-event.component';
+import { HostListenersComponent } from './host-listeners/host-listeners.component';
+import { EvenNumbersComponent } from './even-numbers/even-numbers.component';
+import { CombinedArrayComponent } from './combined-array/combined-array.component';
+import { AgeArrayComponent } from './age-array/age-array.component';
+import { MyCustomDirective } from './my-custom.directive';
+import { ChildRegistrationComponent } from './child-registration/child-registration.component';
 
 
 
@@ -80,10 +86,13 @@ import { LazyLoadComponent } from './lazy-load/lazy-load.component';
     ContactComponent,
     NotificationComponent,
     LazyLoadComponent,
-
-   
-
- 
+    KeyboardEventComponent,
+    HostListenersComponent,
+    EvenNumbersComponent,
+    CombinedArrayComponent,
+    AgeArrayComponent,
+    MyCustomDirective,
+    ChildRegistrationComponent,
   
   ],
   imports: [
@@ -93,6 +102,7 @@ import { LazyLoadComponent } from './lazy-load/lazy-load.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
+    FormsModule,
     MatFormFieldModule,
     MatIconModule,
     BrowserAnimationsModule,

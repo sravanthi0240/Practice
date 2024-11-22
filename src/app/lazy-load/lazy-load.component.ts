@@ -37,7 +37,7 @@ export class LazyLoadComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    const scrollTop = window.scrollY || window.pageYOffset;
+    const scrollTop = window.scrollY ;
     if((window.innerHeight +window.scrollY) >= document.body.offsetHeight){
       this.loadItems();
     }

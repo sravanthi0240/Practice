@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of sortedArray; let i = index ">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td><input type="number" [(ngModel)]="product.quantity" (keyup)="total(product)" min="0"  ></td>
+            <td>{{product.price}}</td>
+            <td>{{product.totalPrice}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>{{grandTotal}}</td>
+        </tr>
+    </tfoot>
+</table>
